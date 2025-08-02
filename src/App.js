@@ -7,11 +7,13 @@ import React from 'react';
 // import {Routes,Route ,Link} from 'react-router-dom';
 // import {Routes, Route,Link} from 'react-router-dom';
 // import { UserProfile } from './Dynamic_User-page/UserProfile';
-import{Routes,Route,Navigate} from 'react-router-dom';
-import Login from "./Route_Protection/Login";
-import AdminPage from './Route_Protection/AdminPage';
-import Home from "./Not_Found_Page/Home";
+// import{Routes,Route,Navigate} from 'react-router-dom';
+// import Login from "./Route_Protection/Login";
+// import AdminPage from './Route_Protection/AdminPage';
+// import Home from "./Not_Found_Page/Home";
 // import NotFound from "./Not_Found_Page/NotFound"
+// import {LoginForm} from './Login_Form/LoginForm';
+import {ContactForm} from "./Contact_Form/ContactForm"
 
 
 
@@ -33,20 +35,28 @@ import Home from "./Not_Found_Page/Home";
 //   fontWeight: 'bold',
 //   color: '#4fc4f3ff',
 // };
-const isLoggedIn=true;
+// const isLoggedIn=true;
 
 function App() {
   return (
-    <div>
-   <Routes>
-    <Route path="/login" element={<Login/>}/>
-    <Route path="/" element={isLoggedIn ? <AdminPage/>:<Navigate to="/login" />}/>
 
-    {/* <Route path="/" element={<Home/>}/>
-    <Route path="*" element={<NotFound />}/> */}
-   </Routes>
+  <div>
+   {/* <LoginForm/> */}
+   <ContactForm/>
+  </div>
+
+
+
+  //   <div>
+  //  <Routes>
+  //   <Route path="/login" element={<Login/>}/>
+  //   <Route path="/" element={isLoggedIn ? <AdminPage/>:<Navigate to="/login" />}/>
+
+  //    <Route path="/" element={<Home/>}
+  //   <Route path="*" element={<NotFound />}/>
+  //  </Routes>
     
-    {/* {/* <div>
+    /* {/* <div>
      <div className='d-flex justify-content-center'>
      <div>
      <h5>Welcome to User Page</h5>
@@ -70,8 +80,8 @@ function App() {
     <Route path="/About" element={<About/>}></Route>
     <Route path="/Contact" element={<Contact/>}></Route>
     </Routes>  
-    </div> */}
-    </div>
+    </div> */
+    // </div>
   );
 }
 
