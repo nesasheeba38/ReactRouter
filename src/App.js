@@ -40,23 +40,21 @@ import { AddressForm } from './Address/AddressForm';
 
 function App() {
   return (
-
+   <BrowserRouter>
   <div>
    {/* <LoginForm/> */}
    {/* <ContactForm/> */}
    <AddressForm/>
-  </div>
-
-
-
-  //   <div>
-  //  <Routes>
-  //   <Route path="/login" element={<Login/>}/>
-  //   <Route path="/" element={isLoggedIn ? <AdminPage/>:<Navigate to="/login" />}/>
-
-  //    <Route path="/" element={<Home/>}
-  //   <Route path="*" element={<NotFound />}/>
-  //  </Routes>
+   </div>
+     {/* <div>
+      <Routes>
+       <Route path="/login" element={<Login/>}/>
+       <Route path="/" element={isLoggedIn ? <AdminPage/>:<Navigate to="/login" />}/>
+       <Route path="/" element={<Home/>}/>
+        <Route path="*" element={<NotFound />}/>
+       </Routes>
+       </div> */}
+  </BrowserRouter>
     
     /* {/* <div>
      <div className='d-flex justify-content-center'>
