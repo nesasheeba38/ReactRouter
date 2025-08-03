@@ -13,7 +13,8 @@ import React from 'react';
 // import Home from "./Not_Found_Page/Home";
 // import NotFound from "./Not_Found_Page/NotFound"
 // import {LoginForm} from './Login_Form/LoginForm';
-import {ContactForm} from "./Contact_Form/ContactForm"
+// import {ContactForm} from "./Contact_Form/ContactForm"
+import { AddressForm } from './Address/AddressForm';
 
 
 
@@ -42,7 +43,8 @@ function App() {
 
   <div>
    {/* <LoginForm/> */}
-   <ContactForm/>
+   {/* <ContactForm/> */}
+   <AddressForm/>
   </div>
 
 

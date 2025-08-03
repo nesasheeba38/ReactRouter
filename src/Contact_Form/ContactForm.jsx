@@ -2,7 +2,7 @@ import Form from 'react-bootstrap/Form';
 import {useForm} from "react-hook-form";
 import * as yup from "yup";
 import {yupResolver} from "@hookform/resolvers/yup";
-import {Button,Alert} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import {useState} from "react";
 
 
@@ -25,7 +25,6 @@ export const ContactForm= () =>{
         console.log(data);
         setSuccessMessage("Submitted Successfully");
         reset();
-        setTimeout(()=>setSuccessMessage(""),5000);
     };
    return (
     <div className="container my-4 d-flex justify-content-center">
@@ -46,6 +45,11 @@ export const ContactForm= () =>{
             <Form.Control {...register('email')} placeholder="Enter your email" />
             {errors.email && <p className="text-danger">{errors.email.message}</p>}
           </Form.Group>
+           <Form.Group className="mb-3">
+            <Form.Label>country</Form.Label>
+            <Form.Control {...register('country')} placeholder="" />
+            {errors.email && <p className="text-danger">{errors.email.message}</p>}
+          </Form.Group>
 
           <Form.Group className="mb-3">
             <Form.Label>Phone</Form.Label>
@@ -56,10 +60,10 @@ export const ContactForm= () =>{
           <Form.Group className="mb-3">
             <Form.Label>Message</Form.Label>
             <Form.Control as="textarea" rows={3} {...register('message')} placeholder="Your message" />
-            {errors.message && <p className="text-danger">{errors.message.message}</p>}
+            {errors.m <Buttessage && <p className="text-danger">{errors.message.message}</p>}
           </Form.Group>
 
-          <Button type="submit" variant="primary" className="w-40">Submit</Button>
+         <Button type="submit" variant="primary" className="w-40">Submit</Button>
         </Form>
       </div>
     </div>
